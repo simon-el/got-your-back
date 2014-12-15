@@ -1,0 +1,393 @@
+user@ubuntu-user:~/devel/bkpscript/mail/gyb/got-your-back$ python ./gyb.py  --debug --email  user@companyname.com  --action backup --local-folder ./backup_user2
+connect: (www.googleapis.com, 443)
+send: 'GET /discovery/v1/apis/oauth2/v2/rest HTTP/1.1\r\nHost: www.googleapis.com\r\naccept-encoding: gzip, deflate\r\nuser-agent: Python-httplib2/0.9 (gzip)\r\n\r\n'
+reply: 'HTTP/1.1 200 OK\r\n'
+header: Expires: Mon, 15 Dec 2014 17:24:38 GMT
+header: Date: Mon, 15 Dec 2014 17:19:38 GMT
+header: ETag: "ye6orv2F-1npMW3u9suM3a7C5Bo/0gAJ67CzwpQdUYth2uCNUYeH8wM"
+header: Vary: Origin
+header: Vary: X-Origin
+header: Content-Type: application/json; charset=UTF-8
+header: Content-Encoding: gzip
+header: X-Content-Type-Options: nosniff
+header: X-Frame-Options: SAMEORIGIN
+header: X-XSS-Protection: 1; mode=block
+header: Content-Length: 1844
+header: Server: GSE
+header: Cache-Control: public, max-age=300, must-revalidate, no-transform
+header: Age: 82
+header: Alternate-Protocol: 443:quic,p=0.02
+send: 'POST /oauth2/v2/tokeninfo?access_token=ya29.3QB3j8hw26XIRKROeJ80uiJj0G1OoPtKVHZCla_eM1UTQqzJ40GmgNcUNI3I0mm9AFN-M9ppr4gt8g&alt=json HTTP/1.1\r\nHost: www.googleapis.com\r\ncontent-length: 0\r\naccept-encoding: gzip, deflate\r\naccept: application/json\r\nuser-agent: google-api-python-client/1.0\r\n\r\n'
+reply: 'HTTP/1.1 200 OK\r\n'
+header: Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+header: Pragma: no-cache
+header: Expires: Fri, 01 Jan 1990 00:00:00 GMT
+header: Date: Mon, 15 Dec 2014 17:21:00 GMT
+header: Vary: Origin
+header: Vary: X-Origin
+header: Content-Type: application/json; charset=UTF-8
+header: Content-Encoding: gzip
+header: X-Content-Type-Options: nosniff
+header: X-Frame-Options: SAMEORIGIN
+header: X-XSS-Protection: 1; mode=block
+header: Server: GSE
+header: Alternate-Protocol: 443:quic,p=0.02
+header: Transfer-Encoding: chunked
+  20:31.24 > HIGI1 AUTHENTICATE XOAUTH2
+  20:31.26 < + 
+  20:31.26 write literal size 160
+  20:32.02 < * CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 UIDPLUS COMPRESS=DEFLATE ENABLE MOVE CONDSTORE ESEARCH UTF8=ACCEPT
+  20:32.02 < HIGI1 OK user@companyname.com authenticated (Success)
+  20:32.02 > HIGI2 CAPABILITY
+  20:32.14 < * CAPABILITY IMAP4rev1 UNSELECT IDLE NAMESPACE QUOTA ID XLIST CHILDREN X-GM-EXT-1 UIDPLUS COMPRESS=DEFLATE ENABLE MOVE CONDSTORE ESEARCH UTF8=ACCEPT
+  20:32.14 < HIGI2 OK Success
+  20:32.14 > HIGI3 ID ("name" "Got Your Back: Gmail Backup" "version" "0.29" "vendor" "Jay Lee" "contact" "jay0lee@gmail.com")
+  20:32.25 < * ID ("name" "GImap" "vendor" "Google, Inc." "support-url" "http://support.google.com/mail" "version" "gmail_imap_141209.04_p0" "remote-host" "46.17.166.12")
+  20:32.25 < HIGI3 OK Success
+  20:32.25 > HIGI4 LIST "[Gmail]/" *
+  20:32.36 < * LIST (\All \HasNoChildren) "/" "[Gmail]/All Mail"
+  20:32.36 < * LIST (\HasNoChildren \Drafts) "/" "[Gmail]/Drafts"
+  20:32.36 < * LIST (\HasNoChildren \Important) "/" "[Gmail]/Important"
+  20:32.36 < * LIST (\HasNoChildren \Sent) "/" "[Gmail]/Sent Mail"
+  20:32.36 < * LIST (\HasNoChildren \Junk) "/" "[Gmail]/Spam"
+  20:32.36 < * LIST (\HasNoChildren \Flagged) "/" "[Gmail]/Starred"
+  20:32.36 < * LIST (\HasNoChildren \Trash) "/" "[Gmail]/Trash"
+  20:32.36 < HIGI4 OK Success
+  20:32.36 > HIGI5 EXAMINE "[Gmail]/All Mail"
+  20:32.48 < * FLAGS (\Answered \Flagged \Draft \Deleted \Seen $Phishing $NotPhishing)
+  20:32.48 < * OK [PERMANENTFLAGS ()] Flags permitted.
+  20:32.48 < * OK [UIDVALIDITY 11] UIDs valid.
+  20:32.48 < * 139 EXISTS
+  20:32.48 < * 0 RECENT
+  20:32.48 < * OK [UIDNEXT 387] Predicted next UID.
+  20:32.48 < * OK [HIGHESTMODSEQ 11684]
+  20:32.48 < HIGI5 OK [READ-ONLY] [Gmail]/All Mail selected. (Success)
+
+Using backup folder ./backup_user2
+Using folder [Gmail]/All Mail
+  20:32.48 > HIGI6 EXAMINE "[Gmail]/All Mail"
+  20:32.60 < * FLAGS (\Answered \Flagged \Draft \Deleted \Seen $Phishing $NotPhishing)
+  20:32.60 < * OK [PERMANENTFLAGS ()] Flags permitted.
+  20:32.60 < * OK [UIDVALIDITY 11] UIDs valid.
+  20:32.60 < * 139 EXISTS
+  20:32.60 < * 0 RECENT
+  20:32.60 < * OK [UIDNEXT 387] Predicted next UID.
+  20:32.60 < * OK [HIGHESTMODSEQ 11684]
+  20:32.60 < HIGI6 OK [READ-ONLY] [Gmail]/All Mail selected. (Success)
+  20:32.60 > HIGI7 UID SEARCH CHARSET UTF-8 X-GM-RAW {13}
+  20:32.71 < + go ahead
+  20:32.71 write literal size 13
+  20:32.87 < * SEARCH 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 345 346 347 357 358 364 365 372 373 380 381 382 383 384 385 386
+  20:32.87 < HIGI7 OK SEARCH completed (Success)
+GYB needs to examine 139 messages
+GYB already has a backup of 0 messages
+GYB needs to backup 139 messages
+  20:32.87 > HIGI8 UID FETCH 217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318 (X-GM-LABELS INTERNALDATE FLAGS BODY.PEEK[])
+  20:33.01 < * 1 FETCH (X-GM-LABELS ("\\Important" github) UID 217 INTERNALDATE "12-Dec-2014 14:55:11 +0000" FLAGS (\Seen) BODY[] {4862}
+  20:33.01 read literal size 4862
+  20:33.01 < )
+  20:33.01 < * 2 FETCH (X-GM-LABELS ("\\Important" github) UID 218 INTERNALDATE "12-Dec-2014 14:36:44 +0000" FLAGS (\Seen) BODY[] {6287}
+  20:33.01 read literal size 6287
+  20:33.12 < )
+  20:33.12 < * 3 FETCH (X-GM-LABELS ("\\Important" github) UID 219 INTERNALDATE "12-Dec-2014 13:40:45 +0000" FLAGS (\Seen) BODY[] {4894}
+  20:33.12 read literal size 4894
+  20:33.12 < )
+  20:33.12 < * 4 FETCH (X-GM-LABELS ("\\Important" github) UID 220 INTERNALDATE "12-Dec-2014 13:14:10 +0000" FLAGS (\Seen) BODY[] {4241}
+  20:33.12 read literal size 4241
+  20:33.15 < )
+  20:33.15 < * 5 FETCH (X-GM-LABELS ("\\Important" github) UID 221 INTERNALDATE "12-Dec-2014 13:14:10 +0000" FLAGS (\Seen) BODY[] {7673}
+  20:33.15 read literal size 7673
+  20:33.15 < )
+  20:33.15 < * 6 FETCH (X-GM-LABELS ("\\Important" github) UID 222 INTERNALDATE "12-Dec-2014 12:49:46 +0000" FLAGS (\Seen) BODY[] {4328}
+  20:33.15 read literal size 4328
+  20:33.20 < )
+  20:33.20 < * 7 FETCH (X-GM-LABELS ("\\Important" github) UID 223 INTERNALDATE "12-Dec-2014 12:36:10 +0000" FLAGS (\Seen) BODY[] {4381}
+  20:33.20 read literal size 4381
+  20:33.20 < )
+  20:33.20 < * 8 FETCH (X-GM-LABELS ("\\Important" github) UID 224 INTERNALDATE "12-Dec-2014 12:22:37 +0000" FLAGS (\Seen) BODY[] {4114}
+  20:33.20 read literal size 4114
+  20:33.20 < )
+  20:33.20 < * 9 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 225 INTERNALDATE "11-Dec-2014 17:37:12 +0000" FLAGS (\Seen) BODY[] {4481}
+  20:33.20 read literal size 4481
+  20:33.21 < )
+  20:33.21 < * 10 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 226 INTERNALDATE "11-Dec-2014 17:30:29 +0000" FLAGS (\Seen) BODY[] {5223}
+  20:33.21 read literal size 5223
+  20:33.21 < )
+  20:33.21 < * 11 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 227 INTERNALDATE "11-Dec-2014 17:26:55 +0000" FLAGS (\Seen) BODY[] {6335}
+  20:33.21 read literal size 6335
+  20:33.21 < )
+  20:33.21 < * 12 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Sent\"" "\\Important" "\\Sent") UID 228 INTERNALDATE "11-Dec-2014 17:03:11 +0000" FLAGS (\Seen) BODY[] {2277}
+  20:33.21 read literal size 2277
+  20:33.25 < )
+  20:33.25 < * 13 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 229 INTERNALDATE "11-Dec-2014 16:58:21 +0000" FLAGS (\Seen) BODY[] {9438}
+  20:33.25 read literal size 9438
+  20:33.26 < )
+  20:33.26 < * 14 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 230 INTERNALDATE "11-Dec-2014 16:58:21 +0000" FLAGS (\Seen) BODY[] {4303}
+  20:33.26 read literal size 4303
+  20:33.26 < )
+  20:33.26 < * 15 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 231 INTERNALDATE "11-Dec-2014 16:31:31 +0000" FLAGS (\Answered \Seen) BODY[] {3442}
+  20:33.26 read literal size 3442
+  20:33.26 < )
+  20:33.26 < * 16 FETCH (X-GM-LABELS (github) UID 232 INTERNALDATE "11-Dec-2014 16:28:02 +0000" FLAGS (\Seen) BODY[] {5138}
+  20:33.26 read literal size 5138
+  20:33.26 < )
+  20:33.26 < * 17 FETCH (X-GM-LABELS (github) UID 233 INTERNALDATE "11-Dec-2014 15:49:35 +0000" FLAGS (\Seen) BODY[] {9912}
+  20:33.26 read literal size 9912
+  20:33.30 < )
+  20:33.30 < * 18 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 234 INTERNALDATE "11-Dec-2014 15:30:25 +0000" FLAGS (\Seen) BODY[] {4941}
+  20:33.30 read literal size 4941
+  20:33.30 < )
+  20:33.30 < * 19 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 235 INTERNALDATE "11-Dec-2014 15:30:24 +0000" FLAGS (\Seen) BODY[] {4357}
+  20:33.30 read literal size 4357
+  20:33.31 < )
+  20:33.31 < * 20 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 236 INTERNALDATE "11-Dec-2014 14:45:44 +0000" FLAGS (\Seen) BODY[] {12675}
+  20:33.31 read literal size 12675
+  20:33.40 < )
+  20:33.40 < * 21 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 237 INTERNALDATE "11-Dec-2014 14:45:44 +0000" FLAGS (\Seen) BODY[] {4309}
+  20:33.40 read literal size 4309
+  20:33.40 < )
+  20:33.40 < * 22 FETCH (X-GM-LABELS (github) UID 238 INTERNALDATE "11-Dec-2014 14:42:00 +0000" FLAGS (\Seen) BODY[] {4399}
+  20:33.40 read literal size 4399
+  20:33.42 < )
+  20:33.42 < * 23 FETCH (X-GM-LABELS (github) UID 239 INTERNALDATE "11-Dec-2014 14:33:35 +0000" FLAGS (\Seen) BODY[] {4094}
+  20:33.42 read literal size 4094
+  20:33.42 < )
+  20:33.42 < * 24 FETCH (X-GM-LABELS (github) UID 240 INTERNALDATE "11-Dec-2014 14:02:48 +0000" FLAGS (\Seen) BODY[] {4752}
+  20:33.42 read literal size 4752
+  20:33.45 < )
+  20:33.45 < * 25 FETCH (X-GM-LABELS (github) UID 241 INTERNALDATE "11-Dec-2014 13:54:18 +0000" FLAGS (\Seen) BODY[] {4895}
+  20:33.45 read literal size 4895
+  20:33.45 < )
+  20:33.45 < * 26 FETCH (X-GM-LABELS ("\"\\\\Inbox\"" "\\Inbox") UID 242 INTERNALDATE "11-Dec-2014 13:45:38 +0000" FLAGS (\Seen) BODY[] {2379}
+  20:33.45 read literal size 2379
+  20:33.45 < )
+  20:33.45 < * 27 FETCH (X-GM-LABELS (github) UID 243 INTERNALDATE "11-Dec-2014 13:08:35 +0000" FLAGS (\Seen) BODY[] {5883}
+  20:33.45 read literal size 5883
+  20:33.46 < )
+  20:33.46 < * 28 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 244 INTERNALDATE "11-Dec-2014 12:47:49 +0000" FLAGS (\Seen) BODY[] {4942}
+  20:33.46 read literal size 4942
+  20:33.47 < )
+  20:33.47 < * 29 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 245 INTERNALDATE "11-Dec-2014 12:47:47 +0000" FLAGS (\Seen) BODY[] {4870}
+  20:33.47 read literal size 4870
+  20:33.49 < )
+  20:33.49 < * 30 FETCH (X-GM-LABELS (github) UID 246 INTERNALDATE "11-Dec-2014 12:44:40 +0000" FLAGS (\Seen) BODY[] {5050}
+  20:33.49 read literal size 5050
+  20:33.49 < )
+  20:33.49 < * 31 FETCH (X-GM-LABELS (github) UID 247 INTERNALDATE "11-Dec-2014 12:42:23 +0000" FLAGS (\Seen) BODY[] {9356}
+  20:33.49 read literal size 9356
+  20:33.50 < )
+  20:33.50 < * 32 FETCH (X-GM-LABELS (github) UID 248 INTERNALDATE "11-Dec-2014 12:33:28 +0000" FLAGS (\Seen) BODY[] {16305}
+  20:33.50 read literal size 16305
+  20:33.52 < )
+  20:33.52 < * 33 FETCH (X-GM-LABELS (github) UID 249 INTERNALDATE "11-Dec-2014 11:25:23 +0000" FLAGS (\Seen) BODY[] {5447}
+  20:33.52 read literal size 5447
+  20:33.53 < )
+  20:33.53 < * 34 FETCH (X-GM-LABELS ("\"\\\\Sent\"" "\\Sent") UID 252 INTERNALDATE "11-Dec-2014 10:20:55 +0000" FLAGS (\Seen) BODY[] {4430}
+  20:33.53 read literal size 4430
+  20:33.54 < )
+  20:33.54 < * 35 FETCH (X-GM-LABELS ("\"\\\\Inbox\"" "\\Inbox") UID 253 INTERNALDATE "11-Dec-2014 09:47:02 +0000" FLAGS (\Seen) BODY[] {2610}
+  20:33.54 read literal size 2610
+  20:33.55 < )
+  20:33.55 < * 36 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 254 INTERNALDATE "11-Dec-2014 09:44:37 +0000" FLAGS (\Seen) BODY[] {11361}
+  20:33.55 read literal size 11361
+  20:33.57 < )
+  20:33.57 < * 37 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 255 INTERNALDATE "11-Dec-2014 09:42:56 +0000" FLAGS (\Seen) BODY[] {5251}
+  20:33.57 read literal size 5251
+  20:33.58 < )
+  20:33.58 < * 38 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Sent\"" "\\Important" "\\Sent") UID 256 INTERNALDATE "11-Dec-2014 09:29:53 +0000" FLAGS (\Seen) BODY[] {1363}
+  20:33.58 read literal size 1363
+  20:33.58 < )
+  20:33.58 < * 39 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 257 INTERNALDATE "10-Dec-2014 20:57:36 +0000" FLAGS (\Seen) BODY[] {8357}
+  20:33.58 read literal size 8357
+  20:33.59 < )
+  20:33.59 < * 40 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Sent\"" "\\Important" "\\Sent") UID 258 INTERNALDATE "10-Dec-2014 18:00:43 +0000" FLAGS (\Seen) BODY[] {4288}
+  20:33.59 read literal size 4288
+  20:33.59 < )
+  20:33.59 < * 41 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 259 INTERNALDATE "10-Dec-2014 17:43:11 +0000" FLAGS (\Answered \Seen) BODY[] {4872}
+  20:33.59 read literal size 4872
+  20:33.60 < )
+  20:33.60 < * 42 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 260 INTERNALDATE "10-Dec-2014 16:30:00 +0000" FLAGS (\Seen) BODY[] {11771}
+  20:33.60 read literal size 11771
+  20:33.61 < )
+  20:33.61 < * 43 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 261 INTERNALDATE "10-Dec-2014 15:27:28 +0000" FLAGS (\Seen) BODY[] {11301}
+  20:33.61 read literal size 11301
+  20:33.62 < )
+  20:33.62 < * 44 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 262 INTERNALDATE "10-Dec-2014 15:15:55 +0000" FLAGS (\Seen) BODY[] {9801}
+  20:33.62 read literal size 9801
+  20:33.65 < )
+  20:33.65 < * 45 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 263 INTERNALDATE "10-Dec-2014 15:15:52 +0000" FLAGS (\Seen) BODY[] {4308}
+  20:33.65 read literal size 4308
+  20:33.65 < )
+  20:33.65 < * 46 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 264 INTERNALDATE "10-Dec-2014 15:06:43 +0000" FLAGS (\Seen) BODY[] {3512}
+  20:33.65 read literal size 3512
+  20:33.65 < )
+  20:33.65 < * 47 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 265 INTERNALDATE "10-Dec-2014 14:01:20 +0000" FLAGS (\Seen) BODY[] {4941}
+  20:33.65 read literal size 4941
+  20:33.68 < )
+  20:33.68 < * 48 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 266 INTERNALDATE "10-Dec-2014 14:00:47 +0000" FLAGS (\Seen) BODY[] {4440}
+  20:33.68 read literal size 4440
+  20:33.68 < )
+  20:33.68 < * 49 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 267 INTERNALDATE "10-Dec-2014 12:54:11 +0000" FLAGS (\Seen) BODY[] {5035}
+  20:33.68 read literal size 5035
+  20:33.70 < )
+  20:33.70 < * 50 FETCH (X-GM-LABELS (github) UID 268 INTERNALDATE "10-Dec-2014 12:53:14 +0000" FLAGS (\Seen) BODY[] {4229}
+  20:33.70 read literal size 4229
+  20:33.70 < )
+  20:33.70 < * 51 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 269 INTERNALDATE "10-Dec-2014 12:47:09 +0000" FLAGS (\Seen) BODY[] {5042}
+  20:33.70 read literal size 5042
+  20:33.72 < )
+  20:33.72 < * 52 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 270 INTERNALDATE "10-Dec-2014 12:44:55 +0000" FLAGS (\Seen) BODY[] {5167}
+  20:33.72 read literal size 5167
+  20:33.72 < )
+  20:33.72 < * 53 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 271 INTERNALDATE "10-Dec-2014 12:43:34 +0000" FLAGS (\Seen) BODY[] {4480}
+  20:33.72 read literal size 4480
+  20:33.73 < )
+  20:33.73 < * 54 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 272 INTERNALDATE "10-Dec-2014 12:41:36 +0000" FLAGS (\Seen) BODY[] {5557}
+  20:33.73 read literal size 5557
+  20:33.74 < )
+  20:33.74 < * 55 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 273 INTERNALDATE "10-Dec-2014 12:38:18 +0000" FLAGS (\Seen) BODY[] {5215}
+  20:33.74 read literal size 5215
+  20:33.75 < )
+  20:33.75 < * 56 FETCH (X-GM-LABELS (github) UID 274 INTERNALDATE "10-Dec-2014 12:01:28 +0000" FLAGS (\Seen) BODY[] {4868}
+  20:33.75 read literal size 4868
+  20:33.75 < )
+  20:33.76 < * 57 FETCH (X-GM-LABELS (github) UID 275 INTERNALDATE "10-Dec-2014 11:49:23 +0000" FLAGS (\Seen) BODY[] {4447}
+  20:33.76 read literal size 4447
+  20:33.77 < )
+  20:33.77 < * 58 FETCH (X-GM-LABELS (github) UID 276 INTERNALDATE "10-Dec-2014 11:43:20 +0000" FLAGS (\Seen) BODY[] {5056}
+  20:33.77 read literal size 5056
+  20:33.77 < )
+  20:33.77 < * 59 FETCH (X-GM-LABELS (github) UID 277 INTERNALDATE "10-Dec-2014 11:39:46 +0000" FLAGS (\Seen) BODY[] {4515}
+  20:33.77 read literal size 4515
+  20:33.79 < )
+  20:33.79 < * 60 FETCH (X-GM-LABELS (github) UID 278 INTERNALDATE "10-Dec-2014 11:15:30 +0000" FLAGS (\Seen) BODY[] {4643}
+  20:33.79 read literal size 4643
+  20:33.79 < )
+  20:33.79 < * 61 FETCH (X-GM-LABELS (github) UID 279 INTERNALDATE "10-Dec-2014 10:58:18 +0000" FLAGS (\Seen) BODY[] {5056}
+  20:33.79 read literal size 5056
+  20:33.81 < )
+  20:33.81 < * 62 FETCH (X-GM-LABELS (github) UID 280 INTERNALDATE "10-Dec-2014 10:58:14 +0000" FLAGS (\Seen) BODY[] {4694}
+  20:33.81 read literal size 4694
+  20:33.81 < )
+  20:33.81 < * 63 FETCH (X-GM-LABELS (github) UID 281 INTERNALDATE "10-Dec-2014 10:53:40 +0000" FLAGS (\Seen) BODY[] {5156}
+  20:33.81 read literal size 5156
+  20:33.82 < )
+  20:33.82 < * 64 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 282 INTERNALDATE "10-Dec-2014 10:22:42 +0000" FLAGS (\Seen) BODY[] {13321}
+  20:33.82 read literal size 13321
+  20:33.84 < )
+  20:33.84 < * 65 FETCH (X-GM-LABELS (github) UID 283 INTERNALDATE "10-Dec-2014 09:51:02 +0000" FLAGS (\Seen) BODY[] {6440}
+  20:33.84 read literal size 6440
+  20:33.84 < )
+  20:33.84 < * 66 FETCH (X-GM-LABELS (github) UID 284 INTERNALDATE "10-Dec-2014 09:25:49 +0000" FLAGS (\Seen) BODY[] {5010}
+  20:33.84 read literal size 5010
+  20:33.90 < )
+  20:33.90 < * 67 FETCH (X-GM-LABELS ("\"\\\\Inbox\"" "\\Inbox") UID 285 INTERNALDATE "10-Dec-2014 08:17:37 +0000" FLAGS (\Seen) BODY[] {18321}
+  20:33.90 read literal size 18321
+  20:33.92 < )
+  20:33.92 < * 68 FETCH (X-GM-LABELS (github) UID 286 INTERNALDATE "09-Dec-2014 17:10:34 +0000" FLAGS (\Seen) BODY[] {4955}
+  20:33.92 read literal size 4955
+  20:33.92 < )
+  20:33.92 < * 69 FETCH (X-GM-LABELS (github) UID 287 INTERNALDATE "09-Dec-2014 17:10:29 +0000" FLAGS (\Seen) BODY[] {4714}
+  20:33.92 read literal size 4714
+  20:33.95 < )
+  20:33.95 < * 70 FETCH (X-GM-LABELS (github) UID 288 INTERNALDATE "09-Dec-2014 17:01:46 +0000" FLAGS (\Seen) BODY[] {4825}
+  20:33.95 read literal size 4825
+  20:33.95 < )
+  20:33.95 < * 71 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 289 INTERNALDATE "09-Dec-2014 17:00:29 +0000" FLAGS (\Seen) BODY[] {1827}
+  20:33.95 read literal size 1827
+  20:33.95 < )
+  20:33.95 < * 72 FETCH (X-GM-LABELS (github) UID 290 INTERNALDATE "09-Dec-2014 16:18:52 +0000" FLAGS (\Seen) BODY[] {6519}
+  20:33.95 read literal size 6519
+  20:34.09 < )
+  20:34.09 < * 73 FETCH (X-GM-LABELS (github) UID 291 INTERNALDATE "09-Dec-2014 16:10:23 +0000" FLAGS (\Seen) BODY[] {4422}
+  20:34.09 read literal size 4422
+  20:34.10 < )
+  20:34.10 < * 74 FETCH (X-GM-LABELS ("\"\\\\Inbox\"" "\\Inbox") UID 292 INTERNALDATE "09-Dec-2014 16:04:10 +0000" FLAGS (\Seen) BODY[] {21218}
+  20:34.10 read literal size 21218
+  20:34.12 < )
+  20:34.12 < * 75 FETCH (X-GM-LABELS (github) UID 293 INTERNALDATE "09-Dec-2014 15:55:28 +0000" FLAGS (\Seen) BODY[] {4412}
+  20:34.12 read literal size 4412
+  20:34.12 < )
+  20:34.12 < * 76 FETCH (X-GM-LABELS (github) UID 294 INTERNALDATE "09-Dec-2014 15:53:52 +0000" FLAGS (\Seen) BODY[] {8936}
+  20:34.12 read literal size 8936
+  20:34.17 < )
+  20:34.17 < * 77 FETCH (X-GM-LABELS (github) UID 295 INTERNALDATE "09-Dec-2014 15:48:58 +0000" FLAGS (\Seen) BODY[] {5027}
+  20:34.17 read literal size 5027
+  20:34.17 < )
+  20:34.17 < * 78 FETCH (X-GM-LABELS ("\"\\\\Inbox\"" "\\Inbox") UID 296 INTERNALDATE "09-Dec-2014 15:41:38 +0000" FLAGS (\Seen) BODY[] {17962}
+  20:34.17 read literal size 17962
+  20:34.19 < )
+  20:34.19 < * 79 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 297 INTERNALDATE "09-Dec-2014 15:35:34 +0000" FLAGS (\Seen) BODY[] {5480}
+  20:34.19 read literal size 5480
+  20:34.19 < )
+  20:34.19 < * 80 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 298 INTERNALDATE "09-Dec-2014 14:28:46 +0000" FLAGS (\Seen) BODY[] {6165}
+  20:34.19 read literal size 6165
+  20:34.21 < )
+  20:34.21 < * 81 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 299 INTERNALDATE "09-Dec-2014 14:18:27 +0000" FLAGS (\Seen) BODY[] {5154}
+  20:34.21 read literal size 5154
+  20:34.21 < )
+  20:34.21 < * 82 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 300 INTERNALDATE "09-Dec-2014 14:16:01 +0000" FLAGS (\Seen) BODY[] {4364}
+  20:34.21 read literal size 4364
+  20:34.22 < )
+  20:34.22 < * 83 FETCH (X-GM-LABELS (github) UID 301 INTERNALDATE "09-Dec-2014 14:13:58 +0000" FLAGS (\Seen) BODY[] {9417}
+  20:34.22 read literal size 9417
+  20:34.24 < )
+  20:34.24 < * 84 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 302 INTERNALDATE "09-Dec-2014 13:42:34 +0000" FLAGS (\Seen) BODY[] {6572}
+  20:34.24 read literal size 6572
+  20:34.24 < )
+  20:34.24 < * 85 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 303 INTERNALDATE "09-Dec-2014 12:55:07 +0000" FLAGS (\Seen) BODY[] {6721}
+  20:34.24 read literal size 6721
+  20:34.26 < )
+  20:34.26 < * 86 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 304 INTERNALDATE "09-Dec-2014 12:42:09 +0000" FLAGS (\Seen) BODY[] {1975}
+  20:34.26 read literal size 1975
+  20:34.26 < )
+  20:34.26 < * 87 FETCH (X-GM-LABELS (github) UID 305 INTERNALDATE "09-Dec-2014 12:35:30 +0000" FLAGS (\Seen) BODY[] {4907}
+  20:34.26 read literal size 4907
+  20:34.26 < )
+  20:34.26 < * 88 FETCH (X-GM-LABELS (github) UID 306 INTERNALDATE "09-Dec-2014 12:34:07 +0000" FLAGS (\Seen) BODY[] {4137}
+  20:34.26 read literal size 4137
+  20:34.28 < )
+  20:34.28 < * 89 FETCH (X-GM-LABELS (github) UID 307 INTERNALDATE "09-Dec-2014 12:32:36 +0000" FLAGS (\Seen) BODY[] {3979}
+  20:34.28 read literal size 3979
+  20:34.28 < )
+  20:34.28 < * 90 FETCH (X-GM-LABELS (github) UID 308 INTERNALDATE "09-Dec-2014 11:04:42 +0000" FLAGS (\Seen) BODY[] {4244}
+  20:34.28 read literal size 4244
+  20:34.30 < )
+  20:34.30 < * 91 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\"\\\\Inbox\"" "\\Important" "\\Inbox") UID 309 INTERNALDATE "09-Dec-2014 08:53:58 +0000" FLAGS (\Seen) BODY[] {7348}
+  20:34.30 read literal size 7348
+  20:34.30 < )
+  20:34.30 < * 92 FETCH (X-GM-LABELS ("\"\\\\Inbox\"" "\\Inbox") UID 310 INTERNALDATE "09-Dec-2014 03:02:03 +0000" FLAGS (\Seen) BODY[] {7200}
+  20:34.30 read literal size 7200
+  20:34.32 < )
+  20:34.32 < * 93 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 311 INTERNALDATE "08-Dec-2014 17:51:54 +0000" FLAGS (\Seen) BODY[] {6062}
+  20:34.32 read literal size 6062
+  20:34.32 < )
+  20:34.32 < * 94 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 312 INTERNALDATE "08-Dec-2014 17:34:49 +0000" FLAGS (\Seen) BODY[] {4902}
+  20:34.32 read literal size 4902
+  20:34.34 < )
+  20:34.34 < * 95 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 313 INTERNALDATE "08-Dec-2014 17:34:36 +0000" FLAGS (\Seen) BODY[] {4945}
+  20:34.34 read literal size 4945
+  20:34.34 < )
+  20:34.34 < * 96 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 314 INTERNALDATE "08-Dec-2014 16:07:09 +0000" FLAGS (\Seen) BODY[] {4887}
+  20:34.34 read literal size 4887
+  20:34.36 < )
+  20:34.36 < * 97 FETCH (X-GM-LABELS ("\"\\\\Important\"" "\\Important" github) UID 315 INTERNALDATE "08-Dec-2014 16:05:14 +0000" FLAGS (\Seen) BODY[] {6935}
+  20:34.36 read literal size 6935
+  20:34.36 < )
+  20:34.36 < * 98 FETCH (X-GM-LABELS ("\"\\\\Sent\"" "\\Sent" github) UID 316 INTERNALDATE "08-Dec-2014 16:03:04 +0000" FLAGS (\Seen) BODY[] {2496}
+  20:34.36 read literal size 2496
+  20:34.38 < )
+  20:34.38 < * 99 FETCH (X-GM-LABELS ("\"\\\\Sent\"" "\\Sent") UID 317 INTERNALDATE "08-Dec-2014 15:57:21 +0000" FLAGS (\Seen) BODY[] {6301}
+  20:34.38 read literal size 6301
+  20:34.38 < )
+  20:34.38 < * 100 FETCH (X-GM-LABELS (github) UID 318 INTERNALDATE "08-Dec-2014 15:35:06 +0000" FLAGS (\Seen) BODY[] {4295}
+  20:34.38 read literal size 4295
+  20:34.38 < )
+  20:34.38 < HIGI8 OK Success
+Traceback (most recent call last):
+  File "./gyb.py", line 1323, in <module>
+    main(sys.argv[1:])
+  File "./gyb.py", line 742, in main
+    (message_num, label))
+sqlite3.IntegrityError: UNIQUE constraint failed: labels.message_num, labels.label
+
